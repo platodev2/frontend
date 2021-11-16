@@ -402,7 +402,7 @@ function Stake() {
         </Paper>
       </Zoom>
 
-      <Zoom in={true}>
+      {/* <Zoom in={true}>
         <Paper className={`ohm-card secondary ${isSmallScreen && "mobile"}`}>
           <div className="card-header">
             <Typography variant="h5">Farm Pool</Typography>
@@ -504,7 +504,7 @@ function Stake() {
             )}
           </div>
         </Paper>
-      </Zoom>
+      </Zoom> */}
     </div>
   );
 }

@@ -37,22 +37,23 @@ function NavContent() {
       <Box className="dapp-sidebar" display="flex" justifyContent="space-between" flexDirection="column">
         <div className="dapp-menu-top">
           <Box className="branding-header">
-            <Link href="https://olympusdao.finance" target="_blank">
-              <SvgIcon
+            <Link href="https://magnetdao.finance" target="_blank">
+              <h1>Magnetdao</h1>
+              {/* <SvgIcon
                 color="primary"
                 component={OlympusIcon}
                 viewBox="0 0 151 100"
                 style={{ minWdth: "151px", minHeight: "98px", width: "151px" }}
-              />
+              /> */}
             </Link>
 
-            {address && (
+            {/* {address && (
               <div className="wallet-link">
                 <Link href={`https://etherscan.io/address/${address}`} target="_blank">
                   {shorten(address)}
                 </Link>
               </div>
-            )}
+            )} */}
           </Box>
 
           <div className="dapp-menu-links">
@@ -123,7 +124,7 @@ function NavContent() {
           </div>
         </div>
         <Box className="dapp-menu-bottom" display="flex" justifyContent="space-between" flexDirection="column">
-          <div className="dapp-menu-external-links">
+          {/* <div className="dapp-menu-external-links">
             {Object.keys(externalUrls).map((link, i) => {
               return (
                 <Link key={i} href={`${externalUrls[link].url}`} target="_blank">
@@ -132,7 +133,7 @@ function NavContent() {
                 </Link>
               );
             })}
-          </div>
+          </div> */}
           <div className="dapp-menu-social">
             <Social />
           </div>
