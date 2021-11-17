@@ -167,53 +167,54 @@ function App() {
   }, [location]);
 
   return (
-    <ThemeProvider theme={themeMode}>
-      <CssBaseline />
-      {/* {isAppLoading && <LoadingSplash />} */}
-      <div className={`app ${isSmallerScreen && "tablet"} ${isSmallScreen && "mobile"}`}>
-        <TopBar theme={theme} toggleTheme={toggleTheme} handleDrawerToggle={handleDrawerToggle} />
-        <nav className={classes.drawer}>
-          <Hidden mdUp>
-            <NavDrawer mobileOpen={mobileOpen} handleDrawerToggle={handleDrawerToggle} />
-          </Hidden>
-          <Hidden smDown>
-            <Sidebar />
-          </Hidden>
-        </nav>
+    <h1>Magnetdao finance</h1>
+    // <ThemeProvider theme={themeMode}>
+    //   <CssBaseline />
+    //   {/* {isAppLoading && <LoadingSplash />} */}
+    //   <div className={`app ${isSmallerScreen && "tablet"} ${isSmallScreen && "mobile"}`}>
+    //     <TopBar theme={theme} toggleTheme={toggleTheme} handleDrawerToggle={handleDrawerToggle} />
+    //     <nav className={classes.drawer}>
+    //       <Hidden mdUp>
+    //         <NavDrawer mobileOpen={mobileOpen} handleDrawerToggle={handleDrawerToggle} />
+    //       </Hidden>
+    //       <Hidden smDown>
+    //         <Sidebar />
+    //       </Hidden>
+    //     </nav>
 
-        <div className={`${classes.content} ${isSmallerScreen && classes.contentShift}`}>
-          <Switch>
-            <Route exact path="/dashboard">
-              <Dashboard />
-            </Route>
+    //     <div className={`${classes.content} ${isSmallerScreen && classes.contentShift}`}>
+    //       <Switch>
+    //         <Route exact path="/dashboard">
+    //           <Dashboard />
+    //         </Route>
 
-            <Route exact path="/">
-              <Redirect to="/stake" />
-            </Route>
+    //         <Route exact path="/">
+    //           <Redirect to="/stake" />
+    //         </Route>
 
-            <Route path="/stake">
-              <Stake />
-              <Route exact path="/stake/migrate">
-                <Migrate />
-              </Route>
-            </Route>
+    //         <Route path="/stake">
+    //           <Stake />
+    //           <Route exact path="/stake/migrate">
+    //             <Migrate />
+    //           </Route>
+    //         </Route>
 
-            <Route path="/bonds">
-              {Object.values(BONDS).map(bond => {
-                return (
-                  <Route exact key={bond} path={`/bonds/${bond}`}>
-                    <Bond bond={bond} />
-                  </Route>
-                );
-              })}
-              <ChooseBond />
-            </Route>
+    //         <Route path="/bonds">
+    //           {Object.values(BONDS).map(bond => {
+    //             return (
+    //               <Route exact key={bond} path={`/bonds/${bond}`}>
+    //                 <Bond bond={bond} />
+    //               </Route>
+    //             );
+    //           })}
+    //           <ChooseBond />
+    //         </Route>
 
-            <Route component={NotFound} />
-          </Switch>
-        </div>
-      </div>
-    </ThemeProvider>
+    //         <Route component={NotFound} />
+    //       </Switch>
+    //     </div>
+    //   </div>
+    // </ThemeProvider>
   );
 }
 
